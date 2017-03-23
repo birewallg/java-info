@@ -5,6 +5,7 @@ Blog about Java programming language, FIX Protocol, Tibco RV
 https://javarevisited.blogspot.ru
 
 # 2: Tproger
+Blog about Java programming language
 https://tproger.ru/tag/java/
 
 # 3: Java67
