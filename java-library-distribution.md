@@ -13,6 +13,9 @@ plugins {
 }
 
 tasks.jar {
+    // optional
+    // exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+    
     manifest {
         attributes 'Main-Class': 'local.App',
                 'Class-Path': configurations.compileClasspath.files.collect { "lib/$it.name" }.join(' ')
