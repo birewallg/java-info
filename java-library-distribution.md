@@ -1,7 +1,7 @@
 >gradle version 7.1
 https://docs.gradle.org/current/userguide/java_library_distribution_plugin.html
 
-Сборка проекта
+Build project
 
 
 ```groovy
@@ -21,4 +21,12 @@ tasks.jar {
                 'Class-Path': configurations.compileClasspath.files.collect { "lib/$it.name" }.join(' ')
     }
 }
+```
+
+For **old** version
+```groovy
+    manifest {
+        attributes 'Main-Class': 'local.App',
+                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+    }
 ```
