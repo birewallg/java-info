@@ -1,6 +1,6 @@
 > implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta4'
 
-Gson utils
+Slf4j logging
 
 ```groovy
 // slf4j
