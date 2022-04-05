@@ -18,3 +18,8 @@ Spring is the most popular application development framework for enterprise Java
 https://spring.io
 https://www.tutorialspoint.com/spring/
 https://docs.spring.io/spring-framework/
+
+
+# 3: Java Modules
+The Badass JLink Plugin
+https://badass-jlink-plugin.beryx.org/releases/latest/
