@@ -46,3 +46,45 @@
 |  ToLongBiFunction<T,U>  |                  It represents a function that accepts two arguments and returns a result of long type.                   |
 |    ToLongFunction<T>    |                               It represents a function that returns a result of long type.                                |
 |    UnaryOperator<T>     |          It represents an operation on a single operand that returnsa a result of the same type as its operand.           |
+  
+  
+  
+## Following substitution is possible:
+
+| 	Current Interface 	 | Preferred Interface  |
+|:----------------------:|:--------------------:|
+|Function<Integer, R>	 | IntFunction<R>		|
+|Function<Long, R> 		 | LongFunction<R>      |
+|Function<Double, R>	 | DoubleFunction<R>    |
+|Function<Double,Integer>| DoubleToIntFunction  |
+|Function<Double,Long>	 | DoubleToLongFunction |
+|Function<Long,Double>	 | LongToDoubleFunction |
+|Function<Long,Integer>	 | LongToIntFunction    |
+|Function<R,Integer>	 | ToIntFunction<R>     |
+|Function<R,Long>		 | ToLongFunction<R>    |
+|Function<R,Double>		 | ToDoubleFunction<R>  |
+|Function<T,T>			 | UnaryOperator<T>     |
+|BiFunction<T,T,T>		 | BinaryOperator<T>    |
+|Consumer<Integer>		 | IntConsumer          |
+|Consumer<Double>		 | DoubleConsumer       |
+|Consumer<Long>			 | LongConsumer         |
+|BiConsumer<T,Integer>	 | ObjIntConsumer<T>    |
+|BiConsumer<T,Long>		 | ObjLongConsumer<T>   |
+|BiConsumer<T,Double>	 | ObjDoubleConsumer<T> |
+|Predicate<Integer>		 | IntPredicate         |
+|Predicate<Double>		 | DoublePredicate      |
+|Predicate<Long>		 | LongPredicate        |
+|Supplier<Integer>		 | IntSupplier          |
+|Supplier<Double>		 | DoubleSupplier       |
+|Supplier<Long>			 | LongSupplier         |
+|Supplier<Boolean>		 | BooleanSupplier      |
+|UnaryOperator<Integer>	 | IntUnaryOperator     |
+|UnaryOperator<Double>	 | DoubleUnaryOperator  |
+|UnaryOperator<Long>	 | LongUnaryOperator    |
+|BinaryOperator<Integer> | IntBinaryOperator    |
+|BinaryOperator<Long>	 | LongBinaryOperator   |
+|BinaryOperator<Double>	 | DoubleBinaryOperator |
+|Function<T, Boolean>	 | Predicate<T>         |
+|BiFunction<T,U,Boolean> | BiPredicate<T,U>     |
+  
+
