@@ -1,14 +1,18 @@
-# java-links
+# java-links 
 
-# 1 - Javarevisited
+# - Developer.com
+Developer.com features tutorials, news, and how-tos focused on topics relevant to software engineers, web developers, programmers, and product managers of development teams.
+https://www.developer.com/java/ 
+
+# - Javarevisited
 Blog about Java programming language, FIX Protocol, Tibco RV
 https://javarevisited.blogspot.ru
 
-# 2 - Tproger
+# - Tproger
 Blog about Java programming language
 https://tproger.ru/tag/java/
 
-# 3 - Java67
+# - Java67
 Java Programming tutorials and Interview Questions
 http://www.java67.com
 
