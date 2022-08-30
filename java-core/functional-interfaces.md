@@ -1,90 +1,145 @@
-##Java Predefined-Functional Interfaces
+## Java Predefined-Functional Interfaces
+
+<details><summary>Java Predefined-Functional Interfaces</summary>
+
+|        Interface        | Params  | Return  |                                                       Description                                                       |
+|:-----------------------:|:-------:|:-------:|:-----------------------------------------------------------------------------------------------------------------------:|
+|     BiConsumer<T,U>     |   T,U   |    -    |             Представляет собой операцию, которая принимает два входных аргумента и не возвращает результат.             |
+|       Consumer<T>       |    T    |    -    |                 Представляет собой операцию, которая принимает один аргумент и не возвращает результат.                 |
+|      Function<T,R>      |    T    |    R    |                   Представляет собой функцию, которая принимает один аргумент и возвращает результат.                   |
+|      Predicate<T>       |    T    | Boolean |                           Представляет собой предикат (логическую функцию) одного аргумента.                            |
+|    BiFunction<T,U,R>    |   T,U   |    R    |                   Представляет собой функцию, которая принимает два аргумента и возвращает результат.                   |
+|    BinaryOperator<T>    |   T,T   |    T    | Представляет собой операцию над двумя операндами одного типа данных. Возвращает результат того же типа, что и операнды. |
+|    BiPredicate<T,U>     |   T,U   | Boolean |                            Представляет собой предикат (логическую функцию) двух аргументов.                            |
+|     BooleanSupplier     |    -    | Boolean |                                     Представляет поставщика логических результатов.                                     |
+|  DoubleBinaryOperator   | Double  | Double  |             Представляет собой операцию над двумя операндами типа Double и возвращает значение типа Double.             |
+|     DoubleConsumer      | Double  |    -    |           Представляет собой операцию, которая принимает один аргумент типа Double и не возвращает результат.           |
+|    DoubleFunction<R>    | Double  |    R    |                 Представляет собой функцию, которая принимает аргумент типа Double и выдает результат.                  |
+|     DoublePredicate     | Double  | Boolean |                     Представляет собой предикат (логическую функцию) одного аргумента типа Double.                      |
+|     DoubleSupplier      |    -    | Double  |                                    Представляет поставщика результатов типа Double.                                     |
+|   DoubleToIntFunction   | Double  | Integer |         Представляет собой функцию, которая принимает аргумент типа Double и возвращает результат типа Integer.         |
+|  DoubleToLongFunction   | Double  |  Long   |          Представляет собой функцию, которая принимает аргумент типа Double и возвращает результат типа Long.           |
+|   DoubleUnaryOperator   | Double  | Double  |            Представляет собой операцию над одним операндом типа Double, которая дает результат типа Double.             |
+|    IntBinaryOperator    | Integer | Integer |           Представляет собой операцию над двумя операндами типа Integer и возвращает результат типа Integer.            |
+|       IntConsumer       | Integer |    -    |            Представляет собой операцию, которая принимает аргумент типа Integer и не возвращает результата.             |
+|     IntFunction<R>      | Integer |    R    |               Представляет собой функцию, которая принимает аргумент типа Integer и возвращает результат.               |
+|      IntPredicate       | Integer | Boolean |                     Представляет собой предикат (логическую функцию) одного аргумента типа Integer.                     |
+|       IntSupplier       |    -    | Integer |                                       Представляет собой поставщика типа Integer.                                       |
+|   IntToDoubleFunction   | Integer | Double  |         Представляет собой функцию, которая принимает аргумент типа Integer и возвращает результат типа Double.         |
+|    IntToLongFunction    | Integer |  Long   |          Представляет собой функцию, которая принимает аргумент типа Integer и возвращает результат типа Long.          |
+|    IntUnaryOperator     | Integer | Integer |           Представляет собой операцию над одним операндом типа Integer, которая дает результат типа Integer.            |
+|   LongBinaryOperator    |  Long   |  Long   |              Представляет собой операцию над двумя операндами типа Long и возвращает результат типа Long.               |
+|      LongConsumer       |  Long   |    -    |           Представляет собой операцию, которая принимает один аргумент типа Long и не возвращает результата.            |
+|     LongFunction<R>     |  Long   |    R    |                Представляет собой функцию, которая принимает аргумент типа Long и возвращает результат.                 |
+|      LongPredicate      |  Long   | Boolean |                Представляет собой предикат (функция с логическим значением) одного аргумента типа Long.                 |
+|      LongSupplier       |    -    |  Long   |                                     Представляет поставщика результатов типа Long.                                      |
+|  LongToDoubleFunction   |  Long   | Double  |          Представляет собой функцию, которая принимает аргумент типа Long и возвращает результат типа Double.           |
+|    LongToIntFunction    |  Long   | Integer |          Представляет собой функцию, которая принимает аргумент типа Long и возвращает результат типа Integer.          |
+|    LongUnaryOperator    |  Long   |  Long   |           Представляет собой операцию над одним операндом типа Long, которая возвращает результат типа Long.            |
+|  ObjDoubleConsumer<T>   | Double  |    -    |    Представляет собой операцию, которая принимает объект и аргумент типа Double и не возвращает никакого результата.    |
+|    ObjIntConsumer<T>    | Integer |    -    |         Представляет собой операцию, которая принимает объект и аргумент типа Integer. Не возвращает результат.         |
+|   ObjLongConsumer<T>    |  Long   |    -    |        Представляет собой операцию, которая принимает объект и аргумент типа Long, но не возвращает результата.         |
+|       Supplier<T>       |    -    |    T    |                                          Представляет поставщика результатов.                                           |
+| ToDoubleBiFunction<T,U> |   T,U   | Double  |             Представляет собой функцию, которая принимает два аргумента и возвращает результат типа Double.             |
+|   ToDoubleFunction<T>   |    T    | Double  |             Представляет собой функцию, которая принимает один аргумент и возвращает результат типа Double.             |
+|  ToIntBiFunction<T,U>   |   T,U   | Integer |              Представляет собой функцию, которая принимает два аргумента и возвращает число типа Integer.               |
+|    ToIntFunction<T>     |    T    | Integer |                        Представляет собой функцию, которая возвращает целое число типа Integer.                         |
+|  ToLongBiFunction<T,U>  |   T,U   |  Long   |              Представляет собой функцию, которая принимает два аргумента и возвращает результат типа Long.              |
+|    ToLongFunction<T>    |    T    |  Long   |                           Представляет собой функцию, которая возвращает результат типа Long.                           |
+|    UnaryOperator<T>     |    T    |    T    |       Представляет собой операцию с одним операндом, которая возвращает результат того же типа, что и ее операнд.       |
+    
+</details>
+
+### Function
+Функциональный интерфейс ```Function<T,R>``` представляет функцию перехода от объекта типа T к объекту типа R:
+```java
+public interface Function<T, R> {
+    R apply(T t);
+}
+```
+
+### Predicate
+Функциональный интерфейс ```Predicate<T>``` проверяет соблюдение некоторого условия. Если оно соблюдается, то возвращается значение true. <br>
+В качестве параметра лямбда-выражение принимает объект типа T:
+```java
+public interface Predicate<T> {
+    boolean test(T t);
+}
+```
+
+### BinaryOperator
+```BinaryOperator<T>``` принимает в качестве параметра два объекта типа T, выполняет над ними бинарную операцию и возвращает ее результат также в виде объекта типа T:
+```java
+public interface BinaryOperator<T> {
+    T apply(T t1, T t2);
+}
+```
+
+### UnaryOperator
+```UnaryOperator<T>``` принимает в качестве параметра объект типа T, выполняет над ними операции и возвращает результат операций в виде объекта типа T:
+```java
+public interface UnaryOperator<T> {
+    T apply(T t);
+}
+```
+
+### Consumer
+```Consumer<T>``` выполняет некоторое действие над объектом типа T, при этом ничего не возвращая:
+```java
+public interface Consumer<T> {
+    void accept(T t);
+}
+```
+
+### Supplier
+```Supplier<T>``` не принимает никаких аргументов, но должен возвращать объект типа T:
+```java
+public interface Consumer<T> {
+    void accept(T t);
+}
+```
+
+## Взаимозаменяемые интерфейсы:
+
+<details><summary>Возможна следующая замена:</summary>
+
+|    Текущий интерфейс     | Предпочтительный интерфейс |
+|:------------------------:|:--------------------------:|
+|   Function<Integer, R>   |       IntFunction<R>       |
+|    Function<Long, R>     |      LongFunction<R>       |
+|   Function<Double, R>    |     DoubleFunction<R>      |
+| Function<Double,Integer> |    DoubleToIntFunction     |
+|  Function<Double,Long>   |    DoubleToLongFunction    |
+|  Function<Long,Double>   |    LongToDoubleFunction    |
+|  Function<Long,Integer>  |     LongToIntFunction      |
+|   Function<R,Integer>    |      ToIntFunction<R>      |
+|     Function<R,Long>     |     ToLongFunction<R>      |
+|    Function<R,Double>    |    ToDoubleFunction<R>     |
+|      Function<T,T>       |      UnaryOperator<T>      |
+|    BiFunction<T,T,T>     |     BinaryOperator<T>      |
+|    Consumer<Integer>     |        IntConsumer         |
+|     Consumer<Double>     |       DoubleConsumer       |
+|      Consumer<Long>      |        LongConsumer        |
+|  BiConsumer<T,Integer>   |     ObjIntConsumer<T>      |
+|    BiConsumer<T,Long>    |     ObjLongConsumer<T>     |
+|   BiConsumer<T,Double>   |    ObjDoubleConsumer<T>    |
+|    Predicate<Integer>    |        IntPredicate        |
+|    Predicate<Double>     |      DoublePredicate       |
+|     Predicate<Long>      |       LongPredicate        |
+|    Supplier<Integer>     |        IntSupplier         |
+|     Supplier<Double>     |       DoubleSupplier       |
+|      Supplier<Long>      |        LongSupplier        |
+|    Supplier<Boolean>     |      BooleanSupplier       |
+|  UnaryOperator<Integer>  |      IntUnaryOperator      |
+|  UnaryOperator<Double>   |    DoubleUnaryOperator     |
+|   UnaryOperator<Long>    |     LongUnaryOperator      |
+| BinaryOperator<Integer>  |     IntBinaryOperator      |
+|   BinaryOperator<Long>   |     LongBinaryOperator     |
+|  BinaryOperator<Double>  |    DoubleBinaryOperator    |
+|   Function<T, Boolean>   |        Predicate<T>        |
+| BiFunction<T,U,Boolean>  |      BiPredicate<T,U>      |
+
+</details>
 
 
-|        Interface        |                                                        Description                                                        |
-|:-----------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
-|     BiConsumer<T,U>     |                    It represents an operation that accepts two input arguments and returns no result.                     |
-|       Consumer<T>       |                     It represents an operation that accepts a single argument and returns no result.                      |
-|      Function<T,R>      |                         It represents a function that accepts one argument and returns a result.                          |
-|      Predicate<T>       |                           It represents a predicate (boolean-valued function) of one argument.                            |
-|    BiFunction<T,U,R>    |                        It represents a function that accepts two arguments and returns a a result.                        |
-|    BinaryOperator<T>    | It represents an operation upon two operands of the same data type. It returns a result of the same type as the operands. |
-|    BiPredicate<T,U>     |                           It represents a predicate (boolean-valued function) of two arguments.                           |
-|     BooleanSupplier     |                                    It represents a supplier of boolean-valued results.                                    |
-|  DoubleBinaryOperator   |                 It represents an operation upon two double type operands and returns a double type value.                 |
-|     DoubleConsumer      |               It represents an operation that accepts a single double type argument and returns no result.                |
-|    DoubleFunction<R>    |                    It represents a function that accepts a double type argument and produces a result.                    |
-|     DoublePredicate     |                     It represents a predicate (boolean-valued function) of one double type argument.                      |
-|     DoubleSupplier      |                                     It represents a supplier of double type results.                                      |
-|   DoubleToIntFunction   |               It represents a function that accepts a double type argument and produces an int type result.               |
-|  DoubleToLongFunction   |               It represents a function that accepts a double type argument and produces a long type result.               |
-|   DoubleUnaryOperator   |              It represents an operation on a single double type operand that produces a double type result.               |
-|    IntBinaryOperator    |                   It represents an operation upon two int type operands and returns an int type result.                   |
-|      IntConsumer	       |                 It represents an operation that accepts a single integer argument and returns no result.                  |
-|     IntFunction<R>      |                      It represents a function that accepts an integer argument and returns a result.                      |
-|      IntPredicate       |                       It represents a predicate (boolean-valued function) of one integer argument.                        |
-|      IntSupplier	       |                                         It represents a supplier of integer type.                                         |
-|  IntToDoubleFunction	   |                     It represents a function that accepts an integer argument and returns a double.                       |
-|    IntToLongFunction    |                       It represents a function that accepts an integer argument and returns a long.                       |
-|    IntUnaryOperator     |                  It represents an operation on a single integer operand that produces an integer result.                  |
-|   LongBinaryOperator	   |                  It represents an operation upon two long type operands and returns a long type result.                   |
-|      LongConsumer       |                It represents an operation that accepts a single long type argument and returns no result.                 |
-|     LongFunction<R>     |                     It represents a function that accepts a long type argument and returns a result.                      |
-|      LongPredicate      |                      It represents a predicate (boolean-valued function) of one long type argument.                       |
-|      LongSupplier       |                                      It represents a supplier of long type results.                                       |
-|  LongToDoubleFunction   |              It represents a function that accepts a long type argument and returns a result of double type.              |
-|    LongToIntFunction    |                 It represents a function that accepts a long type argument and returns an integer result.                 |
-|    LongUnaryOperator    |                 It represents an operation on a single long type operand that returns a long type result.                 |
-|  ObjDoubleConsumer<T>   |              It represents an operation that accepts an object and a double argument, and returns no result.              |
-|    ObjIntConsumer<T>    |           It represents an operation that accepts an object and an integer argument. It does not return result.           |
-|   ObjLongConsumer<T>    |               It represents an operation that accepts an object and a long argument, it returns no result.                |
-|       Supplier<T>       |                                           It represents a supplier of results.                                            |
-| ToDoubleBiFunction<T,U> |                  It represents a function that accepts two arguments and produces a double type result.                   |
-|   ToDoubleFunction<T>   |                                It represents a function that returns a double type result.                                |
-|  ToIntBiFunction<T,U>   |                        It represents a function that accepts two arguments and returns an integer.                        |
-|    ToIntFunction<T>     |                                     It represents a function that returns an integer.                                     |
-|  ToLongBiFunction<T,U>  |                  It represents a function that accepts two arguments and returns a result of long type.                   |
-|    ToLongFunction<T>    |                               It represents a function that returns a result of long type.                                |
-|    UnaryOperator<T>     |          It represents an operation on a single operand that returnsa a result of the same type as its operand.           |
-  
-  
-  
-## Following substitution is possible:
-
-| 	Current Interface 	 | Preferred Interface  |
-|:----------------------:|:--------------------:|
-|Function<Integer, R>	 | IntFunction<R>		|
-|Function<Long, R> 		 | LongFunction<R>      |
-|Function<Double, R>	 | DoubleFunction<R>    |
-|Function<Double,Integer>| DoubleToIntFunction  |
-|Function<Double,Long>	 | DoubleToLongFunction |
-|Function<Long,Double>	 | LongToDoubleFunction |
-|Function<Long,Integer>	 | LongToIntFunction    |
-|Function<R,Integer>	 | ToIntFunction<R>     |
-|Function<R,Long>		 | ToLongFunction<R>    |
-|Function<R,Double>		 | ToDoubleFunction<R>  |
-|Function<T,T>			 | UnaryOperator<T>     |
-|BiFunction<T,T,T>		 | BinaryOperator<T>    |
-|Consumer<Integer>		 | IntConsumer          |
-|Consumer<Double>		 | DoubleConsumer       |
-|Consumer<Long>			 | LongConsumer         |
-|BiConsumer<T,Integer>	 | ObjIntConsumer<T>    |
-|BiConsumer<T,Long>		 | ObjLongConsumer<T>   |
-|BiConsumer<T,Double>	 | ObjDoubleConsumer<T> |
-|Predicate<Integer>		 | IntPredicate         |
-|Predicate<Double>		 | DoublePredicate      |
-|Predicate<Long>		 | LongPredicate        |
-|Supplier<Integer>		 | IntSupplier          |
-|Supplier<Double>		 | DoubleSupplier       |
-|Supplier<Long>			 | LongSupplier         |
-|Supplier<Boolean>		 | BooleanSupplier      |
-|UnaryOperator<Integer>	 | IntUnaryOperator     |
-|UnaryOperator<Double>	 | DoubleUnaryOperator  |
-|UnaryOperator<Long>	 | LongUnaryOperator    |
-|BinaryOperator<Integer> | IntBinaryOperator    |
-|BinaryOperator<Long>	 | LongBinaryOperator   |
-|BinaryOperator<Double>	 | DoubleBinaryOperator |
-|Function<T, Boolean>	 | Predicate<T>         |
-|BiFunction<T,U,Boolean> | BiPredicate<T,U>     |
-  
-
+<br><br>
