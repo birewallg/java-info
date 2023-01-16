@@ -57,6 +57,18 @@ public interface Function<T, R> {
     R apply(T t);
 }
 ```
+<details><summary><b>Demo Function</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Function<Double, Long> function = d -> Math.round(d);
+        System.out.println(function.apply(5.7));
+    }
+}
+```
+</details>
+
 
 ### Predicate
 Функциональный интерфейс ```Predicate<T>``` проверяет соблюдение некоторого условия. Если оно соблюдается, то возвращается значение true. <br>
@@ -66,6 +78,19 @@ public interface Predicate<T> {
     boolean test(T t);
 }
 ```
+<details><summary><b>Demo Predicate</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Predicate<Integer> negative = i -> i < 0;
+        System.out.println(negative.test(-6));
+        System.out.println(negative.test(6)); 
+    }
+}
+```
+</details>
+
 
 ### BinaryOperator
 ```BinaryOperator<T>``` принимает в качестве параметра два объекта типа T, выполняет над ними бинарную операцию и возвращает ее результат также в виде объекта типа T:
@@ -74,6 +99,18 @@ public interface BinaryOperator<T> {
     T apply(T t1, T t2);
 }
 ```
+<details><summary><b>Demo BinaryOperator</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        BinaryOperator<String> uo = (s1, s2) -> s1.concat(s2);
+        System.out.print(uo.apply("Java ",  "8"));
+    }
+}
+```
+</details>
+
 
 ### UnaryOperator
 ```UnaryOperator<T>``` принимает в качестве параметра объект типа T, выполняет над ними операции и возвращает результат операций в виде объекта типа T:
@@ -82,6 +119,18 @@ public interface UnaryOperator<T> {
     T apply(T t);
 }
 ```
+<details><summary><b>Demo UnaryOperator</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        UnaryOperator<String> uo = s -> s.toUpperCase();
+        System.out.print(uo.apply("Java"));
+    }
+}
+```
+</details>
+
 
 ### Consumer
 ```Consumer<T>``` выполняет некоторое действие над объектом типа T, при этом ничего не возвращая:
@@ -90,14 +139,39 @@ public interface Consumer<T> {
     void accept(T t);
 }
 ```
+<details><summary><b>Demo Consumer</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Consumer<String> printUpperCase = str -> System.out.println(str.toUpperCase());
+        printUpperCase.accept("hello");
+    }
+}
+```
+</details>
+
 
 ### Supplier
 ```Supplier<T>``` не принимает никаких аргументов, но должен возвращать объект типа T:
 ```java
-public interface Consumer<T> {
-    void accept(T t);
+public interface Supplier<T> {
+    T get();
 }
 ```
+<details><summary><b>Demo Supplier</b></summary>
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        String t = "One";
+        Supplier<String> supplierStr = () -> t.toUpperCase();
+        System.out.println(supplierStr.get());
+    }
+}
+```
+</details>
+
 
 ## Взаимозаменяемые интерфейсы:
 
