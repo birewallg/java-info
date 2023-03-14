@@ -171,8 +171,22 @@ public class Demo {
 }
 ```
 </details>
+    
 
+### @FunctionalInterface
+ 
+```java
+@FunctionalInterface
+public interface Function5<T, U, V, W, X> {
+    public X accept(T t, U u, V v, W w);
+}
+    
+public static void main(String[] args) throws Exception {
+    Function5<String, Integer, Void, List<Float>, Character> func = (a, b, c, d) -> 'с';
+}
+``` 
 
+    
 ## Взаимозаменяемые интерфейсы:
 
 <details><summary>Возможна следующая замена:</summary>
