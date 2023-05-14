@@ -1,6 +1,8 @@
 >gradle version 7.1
 https://docs.gradle.org/current/userguide/java_library_distribution_plugin.html
 
+Build project in build\distributions\{PROJECT_NAME}.zip
+
 Build project
 
 
