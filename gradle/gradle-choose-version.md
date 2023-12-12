@@ -24,3 +24,6 @@ Java Compatibility
 |      19      |                7.6                 |
 |      20      |                8.1                 |
 |      21      |                8.4                 |
+
+
+[docs.gradle.org](https://docs.gradle.org/8.4/userguide/compatibility.html#java)
