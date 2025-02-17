@@ -3,6 +3,7 @@
 ```groove
 gradle help --scan
 gradle wrapper --gradle-version 7.5
+./gradlew wrapper --gradle-version 8.12 --distribution-type=bin
 ```
 
 
